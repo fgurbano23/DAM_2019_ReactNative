@@ -15,6 +15,7 @@ import {
 } from 'react-native';
 
 import { MonoText } from '../components/StyledText';
+import TabBarIcon from "../components/TabBarIcon";
 
 class HomeScreen extends Component{
   state = {
@@ -32,15 +33,32 @@ class HomeScreen extends Component{
       <View style={styles.container}>
         <ScrollView>
 
+          <View style={ styles.notificationBar}>
+              <View style={{flexDirection:'row'}}>
+                  <Image
+                      style={{width: 30, height: 30}}
+                      source={require('../assets/images/trophy.png')}/>
+                  <Text style={{color:'white',marginLeft:10,fontWeight:'bold'}}>{this.state.userInfo.username}</Text>
+              </View>
+              <View  style={{flexDirection:'row'}}>
+                  <Image
+                      style={{width: 25, height: 25,  marginRight:15}}
+                      source={require('../assets/images/notification.png')}/>
+                  <Image
+                      style={{width: 25, height: 25, marginRight:10}}
+                      source={require('../assets/images/gift_notification.png')}/>
+              </View>
+          </View>
 
-          <View>
-            <TextInput style = {styles.input}
-               underlineColorAndroid = "transparent"
-               placeholder = "Email"
-               placeholderTextColor = "#9a73ef"
-               autoCapitalize = "none"
-               />
-               <View></View>
+          <View style={styles.item}>
+             <Text style = {{marginLeft:15,fontWeight:'bold',fontSize:20,color: '#621107'}}>¡Encuentra a tus amigos!</Text>
+                  <TextInput
+                      style = {styles.SearchUser}
+                      underlineColorAndroid = "transparent"
+                      placeholder = "Nombre de usuario"
+                      placeholderTextColor = "black"
+                      autoCapitalize = "none"
+                  />
           </View>
 
           <View style={styles.rankingWrapper}>
@@ -61,7 +79,7 @@ class HomeScreen extends Component{
               <Button title ="Retar a un amigo" color="#F2C94C"></Button>
             </View>
             <Image 
-            style={{width: '100%', height: 200}}
+            style={{width: '100%', height: 150}}
             source={require('../assets/images/pvp_bg.jpg')}/>
               <Button title ="Jugar" color="#EB5757"></Button>
           </View>
@@ -71,7 +89,7 @@ class HomeScreen extends Component{
             <Text style={styles.title}>SOLO</Text>
             </View>
             <Image 
-            style={{width: '100%', height: 200}}
+            style={{width: '100%', height: 150}}
             source={require('../assets/images/books_bg.jpg')}/>
             <Button title ="Jugar" color="#EB5757"></Button>
           </View>
@@ -123,5 +141,23 @@ rankingPosition:{
   fontSize:30,
   textAlign:'center',
   fontWeight:"200"
-}
+},
+SearchUser:{
+    margin: 15,
+    marginTop:3,
+    height: 40,
+    borderBottomColor: 'gray',
+    borderBottomWidth: 1,
+    padding:10
+},
+notificationBar:
+    {
+        flexDirection:'row',
+        justifyContent:'space-between',
+        backgroundColor:'#3b3b3b',
+        height:50,
+        padding:10,
+        marginTop:30,
+        marginBottom:15
+    }
 });
