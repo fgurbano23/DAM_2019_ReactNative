@@ -1,11 +1,12 @@
 import * as WebBrowser from 'expo-web-browser';
-import React from 'react';
+import React,{ Component }  from 'react';
 import {
   Image,
   Platform,
   ScrollView,
   StyleSheet,
   Text,
+  TextInput,
   TouchableOpacity,
   ListView,
   View,
@@ -15,97 +16,112 @@ import {
 
 import { MonoText } from '../components/StyledText';
 
-export default function HomeScreen() {
-  return (
-    <View style={styles.mainView}>
-        {/* RANKING */}
-        <View style={styles.rankingWrapper}>
-          <Image source={require('../assets/images/trophy.png')} ></Image>
+class HomeScreen extends Component{
+  state = {
+    'appData':{
+      'appTotal':5000
+    },
+    'userInfo':{
+      'username':'MyUser',
+      'userPosition':123,
+    }
+  }
+
+  render(){
+    return (
+      <View style={styles.container}>
+        <ScrollView>
+
+
           <View>
-            <Text style={styles.rankingSubTitle}>Ranking</Text>
-            <Text>1/1000</Text>
+            <TextInput style = {styles.input}
+               underlineColorAndroid = "transparent"
+               placeholder = "Email"
+               placeholderTextColor = "#9a73ef"
+               autoCapitalize = "none"
+               />
+               <View></View>
           </View>
-        </View>
-        {/* PVP */}
-        <View style={styles.contestWrapper}>
-          <Text style={styles.contestType}>PVP</Text>
-          <View style={styles.buttonWrapper}>
-            
-              {/* <Button 
-                title = "Retar"
-                color = "#F2C94C">
-              </Button>
-              <Button               
-                style={styles.buttonsToPlay}
-                title = "Jugar"
-                color = "#F2C94C">
-              </Button> */}
+
+          <View style={styles.rankingWrapper}>
+          <Image 
+            style={{width: 60, height: 60}}
+            source={require('../assets/images/trophy.png')}/>
+            <View>
+              <Text style={styles.title}>Ranking</Text>
+              <Text style={styles.rankingPosition}>
+              {this.state.userInfo.userPosition + '/' + this.state.appData.appTotal}
+              </Text>
+            </View>
           </View>
-        </View>
-        {/* SOLO */}
-        <View style={styles.contestWrapper}>
-          <Text style={styles.contestType}>SOLO</Text>
-          <View style={styles.buttonWrapper}>
-            <Button 
-              style={styles.buttonsToPlay}
-              title = "Jugar"
-              color = "#F2C94C">
-            </Button>
+
+          <View style={styles.item}>
+            <View style={styles.inlineContent}>
+              <Text style={styles.title}>PVP</Text>
+              <Button title ="Retar a un amigo" color="#F2C94C"></Button>
+            </View>
+            <Image 
+            style={{width: '100%', height: 200}}
+            source={require('../assets/images/pvp_bg.jpg')}/>
+              <Button title ="Jugar" color="#EB5757"></Button>
           </View>
-        </View>
+
+          <View style={styles.item}>
+          <View style={styles.inlineContent}>
+            <Text style={styles.title}>SOLO</Text>
+            </View>
+            <Image 
+            style={{width: '100%', height: 200}}
+            source={require('../assets/images/books_bg.jpg')}/>
+            <Button title ="Jugar" color="#EB5757"></Button>
+          </View>
+
+        </ScrollView>
       </View>
-  );
+    )
+  }
 }
 
-HomeScreen.navigationOptions = {
-  header: null,
-};
-
+export default HomeScreen
 
 const styles = StyleSheet.create({
- mainView : {
-  flexDirection:'column',
-  backgroundColor:'white',
-  padding:10,
-  height:'100%'
+  container:{
+    padding: 8,
+  },
+  item: {
+    flexDirection: 'column',
+    justifyContent: 'space-around',
+    marginBottom:8,
  },
- rankingWrapper:{
+ inlineContent:{
+   display:'flex',
+   backgroundColor:'white',
+   flexShrink:0,
+   flexBasis:1,
    flexDirection:'row',
    justifyContent:'space-between',
-   width:'100%',
-   backgroundColor:'red',
-   marginBottom:10,
-   padding:10
+   padding:5,
+   height:50
  },
- rankingSubTitle:{
+ title:{
+  color: '#621107',
+  fontWeight: 'bold',
+  fontSize:20
+},
+rankingWrapper:{
+  backgroundColor:"#E0E0E0",
+  display:'flex',
+  flexShrink:0,
+  flexBasis:1,
+  flexDirection:'row',
+  justifyContent:'space-around',
+  padding:10,
+  marginBottom:8
+},
+rankingPosition:{
   color: '#03303A',
-  fontWeight: 'bold'
- },
- contestWrapper:{
-  flexDirection:'column',
-  position:'relative',
-  width:'100%',
-  height:'30%',
-  backgroundColor:'blue',
-  marginBottom:10,
- },
- contestType:{
-  backgroundColor:'#621107',
-  width:'25%',
-  height:'15%',
+  fontSize:30,
   textAlign:'center',
-  color:'white'
- },
- buttonWrapper:{
-  backgroundColor:'green',
-  flexWrap: 'nowrap',
-  flexDirection:'row-reverse',
-  position:'absolute',
-  bottom:0,
-  right:0,
-  margin:10
- },
- buttonsToPlay:{
- }
- 
+  fontWeight:"200"
+}
 });
