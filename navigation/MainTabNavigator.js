@@ -20,17 +20,24 @@ const HomeStack = createStackNavigator(
 );
 
 HomeStack.navigationOptions = {
-  tabBarLabel: 'Home',
+  tabBarLabel: 'Inicio',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
       name={
         Platform.OS === 'ios'
           ? `ios-information-circle${focused ? '' : '-outline'}`
-          : 'md-information-circle'
+          : 'md-home'
       }
     />
   ),
+  tabBarOptions: {
+    activeTintColor: 'white',
+    inactiveTintColor: 'white',
+    style: {
+        backgroundColor: '#3B3B3B',
+    }
+    }
 };
 
 HomeStack.path = '';
@@ -43,10 +50,17 @@ const LinksStack = createStackNavigator(
 );
 
 LinksStack.navigationOptions = {
-  tabBarLabel: 'Links',
+  tabBarLabel: 'Ranking',
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'} />
+    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-link' : 'md-trophy'} />
   ),
+    tabBarOptions: {
+        activeTintColor: 'white',
+        inactiveTintColor: 'gray',
+        style: {
+            backgroundColor: '#3B3B3B',
+        }
+    }
 };
 
 LinksStack.path = '';
@@ -59,10 +73,17 @@ const SettingsStack = createStackNavigator(
 );
 
 SettingsStack.navigationOptions = {
-  tabBarLabel: 'Settings',
+  tabBarLabel: 'Ajustes',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'} />
   ),
+    tabBarOptions: {
+        activeTintColor: 'white',
+        inactiveTintColor: 'gray',
+        style: {
+            backgroundColor: '#3B3B3B',
+        }
+    }
 };
 
 SettingsStack.path = '';

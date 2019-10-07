@@ -59,7 +59,13 @@ const styles = StyleSheet.create({
   },
 });
 
-/*
 SettingsScreen.navigationOptions = {
-  title: 'app.json',
-};*/
+  title: 'TriviaMóvil',
+  headerStyle: {
+    backgroundColor: '#3b3b3b',
+  },
+  headerTintColor: '#fff',
+  headerTitleStyle: {
+    fontWeight: 'bold',
+  }
+};
