@@ -17,51 +17,103 @@ import {
 
 export default class LinksScreen extends Component{
   state = {
-    'invitationModal':false,
-    'giftModal':false,
-    'appData':{
-      'appTotal':5000,
-    },
-    'userInfo':{
-      'username':'MyUser',
-      'userPosition':123,
-    }
-  }
+    names: [
+      {
+        id: 0,
+        name: 'Ben',
+      },
+      {
+        id: 1,
+        name: 'Susan',
+      },
+      {
+        id: 2,
+        name: 'Robert',
+      },
+      {
+        id: 3,
+        name: 'Mary',
+      },
+      {
+        id: 3,
+        name: 'Mary',
+      }
+    ],
+    awkward:[
+      {
+        gift:'aaa'
+      },
+      {
+        gift:'aaa'
+      },
+      {
+        gift:'aaa'
+      },
+      {
+        gift:'aaa'
+      }
+    ]
+  };
+
   render (){
     return(
-    <ScrollView style={styles.container}>
-      <View>
-        <Text style={styles.rankingPosition}>Premios</Text>
-      </View>
-      <View style={styles.invitationItem}>
-        <View>
+        <ScrollView style={styles.container}>
+          <View>
+            <Text style={styles.rankingPosition}>Premios</Text>
+          </View>
 
-        </View>
-        <View>
-          <Image
-              style={{width: 35, height: 35}}
-              source={require('../assets/images/gift.png')}/>
-        </View>
-      </View>
-      <View style={styles.item}>
-        <TextInput
-            style = {styles.SearchUser}
-            underlineColorAndroid = "transparent"
-            placeholder = "Buscar usuario"
-            placeholderTextColor = "black"
-            autoCapitalize = "none"
-        />
-      </View>
-      <View style={styles.invitationItem}>
-        <Image
-            style={{width: 35, height: 35}}
-            source={require('../assets/images/Ellipse.png')}/>
-        <Text style={{fontWeight:'bold'}}>{this.state.userInfo.username}</Text>
-      </View>
-    </ScrollView>
+          <View style={styles.invitationItem}>
+            <View>
+              {
+                this.state.awkward.map((item, index) => (
+                    <Text style={{fontWeight:'bold'}} key={'awk'+index}>
+                      {index+'. '+item.gift}
+                    </Text>
+                ))
+              }
+            </View>
+            <View>
+              <Image
+                  style={{width: 35, height: 35}}
+                  source={require('../assets/images/gift.png')}/>
+            </View>
+          </View>
+
+
+          <View style={{margin:30}}>
+            <Text style = {{marginLeft:15,fontWeight:'bold',fontSize:20,color: '#621107'}}>¡Encuentra a tus amigos!</Text>
+            <TextInput
+                style = {styles.SearchUser}
+                underlineColorAndroid = "transparent"
+                placeholder = "Buscar usuario"
+                placeholderTextColor = "black"
+                autoCapitalize = "none"
+            />
+          </View>
+
+
+          <View>
+            {
+              this.state.names.map((item, index) => (
+                  <View style={styles.invitationItem} key={index}>
+                    <Image
+                        style={{width: 35, height: 35}}
+                        source={require('../assets/images/Ellipse.png')}/>
+                    <Text style={{fontWeight:'bold'}}>
+                      {item.name}
+                    </Text>
+                    <Text>
+                      {item.id+'pts'}
+                    </Text>
+                  </View>
+              ))
+            }
+          </View>
+        </ScrollView>
     );
   }
-}
+
+  }
 
 LinksScreen.navigationOptions = {
   title: 'TriviaMóvil',
