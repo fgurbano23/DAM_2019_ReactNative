@@ -58,7 +58,7 @@ class HomeScreen extends Component{
                   </TouchableHighlight>
                   <Image
                       style={{width: 25, height: 25, marginRight:10}}
-                      source={require('../assets/images/gift_notification.png')}/>
+                      source={require('../assets/images/notification.png')}/>
               </View>
           </View>
 
@@ -113,11 +113,7 @@ class HomeScreen extends Component{
               visible = {this.state.invitationModal}
               onRequestClose = {() => { console.log("Modal has been closed.") } }>
               <View>
-                  <ImageBackground
-                      style={{width: '100%', height: 50,marginTop:30,marginBottom:30}}
-                      source={require('../assets/images/arrow_title.png')}>
-                      <Text style={{textAlign: 'center',color:'white',fontWeight:'bold',fontSize:25}}>Invitaciones</Text>
-                  </ImageBackground>
+                  
                   <View style={{height:'70%'}}>
                       <ScrollView>
                           <View style={styles.invitationItem}>
