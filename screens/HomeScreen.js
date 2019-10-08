@@ -18,6 +18,7 @@ import {
 
 import { MonoText } from '../components/StyledText';
 import TabBarIcon from "../components/TabBarIcon";
+import LinksScreen from "./LinksScreen";
 
 class HomeScreen extends Component{
   state = {
@@ -42,6 +43,7 @@ class HomeScreen extends Component{
     return (
       <View style={styles.container}>
 
+        {/*Main*/}
         <ScrollView>
           <View style={ styles.notificationBar}>
               <View style={{flexDirection:'row'}}>
@@ -56,9 +58,11 @@ class HomeScreen extends Component{
                           style={{width: 25, height: 25,  marginRight:15}}
                           source={require('../assets/images/notification.png')}/>
                   </TouchableHighlight>
-                  <Image
-                      style={{width: 25, height: 25, marginRight:10}}
-                      source={require('../assets/images/notification.png')}/>
+                  <TouchableHighlight  onPress = {() => {this.toggleGiftModal(true)}}>
+                      <Image
+                          style={{width: 25, height: 25, marginRight:10}}
+                          source={require('../assets/images/gift_notification.png')}/>
+                  </TouchableHighlight>
               </View>
           </View>
 
@@ -148,6 +152,42 @@ class HomeScreen extends Component{
           </Modal>
 
           {/*GIFT MODAL */}
+          <Modal
+              animationType = {"slide"} transparent = {false}
+              visible = {this.state.giftModal}
+              onRequestClose = {() => { console.log("Modal has been closed.") } }>
+              <View>
+                  <ImageBackground
+                      style={{width: '100%', height: 50,marginTop:30,marginBottom:30}}
+                      source={require('../assets/images/arrow_title.png')}>
+                      <Text style={{textAlign: 'center',color:'white',fontWeight:'bold',fontSize:25}}>Premios</Text>
+                  </ImageBackground>
+                  <View style={{height:'70%'}}>
+                      <ScrollView>
+                          <View style={styles.invitationItem}>
+                              <Image
+                                  style={{width: 35, height: 35}}
+                                  source={require('../assets/images/gift.png')}/>
+                              <Text style={{fontWeight:'bold'}}>{this.state.userInfo.username}</Text>
+                              <View>
+                                  <Button
+                                      title ="Aceptar"
+                                      color="#EB5757">
+                                  </Button>
+                              </View>
+                          </View>
+                      </ScrollView>
+                  </View>
+                  <View style={{position:'absolute',bottom:0,right:30}}>
+                      <Button
+                          title ="Regresar"
+                          color="#EB5757"
+                          onPress={() => this.toggleGiftModal(!this.state.giftModal)}>
+                      </Button>
+                  </View>
+              </View>
+
+          </Modal>
 
       </View>
     )
@@ -155,6 +195,17 @@ class HomeScreen extends Component{
 }
 
 export default HomeScreen
+
+HomeScreen.navigationOptions = {
+    title: 'TriviaMóvil',
+    headerStyle: {
+        backgroundColor: '#3b3b3b',
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+        fontWeight: 'bold',
+    }
+};
 
 const styles = StyleSheet.create({
   container:{
