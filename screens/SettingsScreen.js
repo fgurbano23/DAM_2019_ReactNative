@@ -401,6 +401,26 @@ _getRecordingTimestamp() {
             </View>
           </View>
 
+          <View style={styles.playStopContainer}>
+              <TouchableHighlight
+                underlayColor={BACKGROUND_COLOR}
+                style={styles.wrapper}
+                onPress={this._onPlayPausePressed}
+                disabled={!this.state.isPlaybackAllowed || this.state.isLoading}>
+                <Image
+                  style={styles.image}
+                  source={this.state.isPlaying ? ICON_PAUSE_BUTTON.module : ICON_PLAY_BUTTON.module}
+                />
+              </TouchableHighlight>
+              <TouchableHighlight
+                underlayColor={BACKGROUND_COLOR}
+                style={styles.wrapper}
+                onPress={this._onStopPressed}
+                disabled={!this.state.isPlaybackAllowed || this.state.isLoading}>
+                <Image style={styles.image} source={ICON_STOP_BUTTON.module} />
+              </TouchableHighlight>
+            </View>
+
           <View style={styles.item}>
             <TextInput
                 style = {styles.SearchUser}
