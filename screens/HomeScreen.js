@@ -13,17 +13,25 @@ import {
   ListView,
   View,
   ImageBackground,
-  Button
+  Button,
+    CheckBox
 } from 'react-native';
 
 import { MonoText } from '../components/StyledText';
 import TabBarIcon from "../components/TabBarIcon";
 import LinksScreen from "./LinksScreen";
-
+const data = require('../constants/getDatos.json');
 class HomeScreen extends Component{
   state = {
       'invitationModal':false,
       'giftModal':false,
+      'playSoloModal':false,
+      'gameSolo':false,
+      'categorias':data['categorias'],
+      'preguntas':[],
+      'correct':0,
+      'incorrect':0,
+      'win':false,
     'appData':{
       'appTotal':5000,
     },
@@ -38,6 +46,25 @@ class HomeScreen extends Component{
     toggleGiftModal(visible) {
         this.setState({ giftModal: visible });
     };
+    SoloModal(visible) {
+        this.setState({ playSoloModal: visible });
+    };
+
+    selectCategory(value){
+        const cat = this.state.categorias;
+        cat[value]['state'] = !cat[value]['state'];
+        console.log(cat);
+        this.setState({categorias:cat});
+    }
+
+    getPreguntas(){
+        for (var obj in this.state.categorias){
+           if( this.state.categorias[obj]['state']===true){
+               this.setState({preguntas:[...this.state.preguntas,...this.state.categorias[obj]['trivias']]})
+           }
+        }
+        console.log(this.state.preguntas);
+    }
 
   render(){
     return (
@@ -77,6 +104,7 @@ class HomeScreen extends Component{
                   />
           </View>
 
+            {/*buscar usuario*/}
           <View style={styles.rankingWrapper}>
           <Image 
             style={{width: 60, height: 60}}
@@ -89,6 +117,7 @@ class HomeScreen extends Component{
             </View>
           </View>
 
+            {/*PVP*/}
           <View style={styles.item}>
             <View style={styles.inlineContent}>
               <Text style={styles.title}>PVP</Text>
@@ -100,6 +129,7 @@ class HomeScreen extends Component{
               <Button title ="Jugar" color="#EB5757"></Button>
           </View>
 
+            {/*SOLO*/}
           <View style={styles.item}>
           <View style={styles.inlineContent}>
             <Text style={styles.title}>SOLO</Text>
@@ -107,8 +137,9 @@ class HomeScreen extends Component{
             <Image 
             style={{width: '100%', height: 150}}
             source={require('../assets/images/books_bg.jpg')}/>
-            <Button title ="Jugar" color="#EB5757"></Button>
+            <Button title ="Jugar" color="#EB5757"  onPress = {() => {this.SoloModal(true)}}></Button>
           </View>
+
         </ScrollView>
 
           {/*NOTIFICATION MODAL*/}
@@ -193,6 +224,52 @@ class HomeScreen extends Component{
 
           </Modal>
 
+
+          {/*CATEGORIAS*/}
+          <Modal
+              animationType = {"slide"} transparent = {false}
+               visible = {this.state.playSoloModal}
+               onRequestClose = {() => { console.log("Modal has been closed.") } }>
+              <View style={{width:'100%'}}>
+                  <ScrollView>
+                      <Text style={styles.title}>Selecciona las categorías a jugar</Text>
+                      <View>
+                          {
+                              this.state.categorias.map( (item,index) =>(
+                                  <View style={styles.category} key={'categoria'+index}>
+                                      <View style={{justifyContent:'space-around',flexDirection:'row'}}>
+                                          <CheckBox
+                                              title={item['titulo']}
+                                              value={item['state']}
+                                              onChange={() => this.selectCategory(index)
+                                              }
+                                          />
+                                          <Text>{item['titulo']+' | '+ item['dificultad']}</Text>
+                                      </View>
+                                      <Text style={{textAlign:'center'}}>{item['descripcion']}</Text>
+                                  </View>
+                              ))
+                          }
+                      </View>
+                      <View style={{marginTop:50}}>
+                          <Button
+                              title ="Jugar"
+                              color="#F2C94C"
+                              onPress={() => this.getPreguntas()}>
+                          </Button>
+                          <Button
+                              title ="Regresar"
+                              color="#EB5757"
+                              onPress={() => this.SoloModal(!this.state.playSoloModal)}>
+                          </Button>
+                      </View>
+                  </ScrollView>
+              </View>
+
+          </Modal>
+
+
+
       </View>
     )
   }
@@ -212,6 +289,16 @@ HomeScreen.navigationOptions = {
 };
 
 const styles = StyleSheet.create({
+    category: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        padding: 30,
+        margin: 2,
+        borderColor: '#2a4944',
+        borderWidth: 1,
+        backgroundColor: '#d2f7f1'
+    },
   container:{
     padding: 8,
   },

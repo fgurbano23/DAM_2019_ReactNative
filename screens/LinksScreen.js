@@ -15,44 +15,13 @@ import {
   Button
 } from 'react-native';
 
+const data = require('../constants/getDatos.json');
+
 export default class LinksScreen extends Component{
+
   state = {
-    names: [
-      {
-        id: 0,
-        name: 'Ben',
-      },
-      {
-        id: 1,
-        name: 'Susan',
-      },
-      {
-        id: 2,
-        name: 'Robert',
-      },
-      {
-        id: 3,
-        name: 'Mary',
-      },
-      {
-        id: 3,
-        name: 'Mary',
-      }
-    ],
-    awkward:[
-      {
-        gift:'aaa'
-      },
-      {
-        gift:'aaa'
-      },
-      {
-        gift:'aaa'
-      },
-      {
-        gift:'aaa'
-      }
-    ]
+    posiciones : data['Ranking']['posiciones'],
+    sorteo:data['Sorteos'][0]['premios']
   };
 
   render (){
@@ -65,10 +34,15 @@ export default class LinksScreen extends Component{
           <View style={styles.invitationItem}>
             <View>
               {
-                this.state.awkward.map((item, index) => (
-                    <Text style={{fontWeight:'bold'}} key={'awk'+index}>
-                      {index+'. '+item.gift}
-                    </Text>
+                Object.keys(this.state.sorteo).map((item, index) => (
+                    <View key={"sorteo"+index}>
+                      <Text>{item+'. '+'Tipo:'+this.state.sorteo[item]['tipo']}</Text>
+                      <Text style={{fontWeight:'bold'}} key={'sorteo'+index}>
+                        {
+                          this.state.sorteo[item]['titulo']
+                        }
+                      </Text>
+                    </View>
                 ))
               }
             </View>
@@ -94,16 +68,16 @@ export default class LinksScreen extends Component{
 
           <View>
             {
-              this.state.names.map((item, index) => (
+             Object.keys(this.state.posiciones).map((item, index) => (
                   <View style={styles.invitationItem} key={index}>
                     <Image
                         style={{width: 35, height: 35}}
                         source={require('../assets/images/Ellipse.png')}/>
                     <Text style={{fontWeight:'bold'}}>
-                      {item.name}
+                      {item+'. '+this.state.posiciones[item]['alias']}
                     </Text>
                     <Text>
-                      {item.id+'pts'}
+                      {this.state.posiciones[item]['puntos']+'pts'}
                     </Text>
                   </View>
               ))
@@ -192,7 +166,6 @@ const styles = StyleSheet.create({
     flexDirection:'row',
     justifyContent:'space-around',
     padding:5,
-    height:50,
     marginBottom:15,
   }
 });
