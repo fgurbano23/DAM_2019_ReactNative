@@ -1,0 +1,753 @@
+{
+	"token": "85761a0a88581dd5f7e3eb62938686a9dbbc7d73",
+	"versionData": "1.0.1",
+	"usuario": {
+		"usuarioId": "61185",
+		"nombre": "Maria Paula Herrero",
+		"alias": "mpaulaherrero",
+		"email": "mpaulaherrero@gmail.com",
+		"puntosTotales": 100,
+		"posiciónRanking": 4,
+		"imagen": null,
+		"sonido": null
+	},
+	"configuracion": {
+		"appVersion": "1.0",
+		"titulo": "Trivias",
+		"tiempoParaSincronizar": 3600,
+		"tiempoEnviarPuntos": 3600,
+		"triviaRespCorrectaPuntos": 100,
+		"triviaRespRapidaPuntos": 100,
+		"triviaRespRapidaTiempo": 5,
+		"retoCantPreg":	5,
+		"retoRespCorrectaPuntos": 100,
+		"retoRespPrimeroPuntos":	100,
+		"retoRespIncorrectaPuntos":	100,
+		"retoNoContestaPuntos":	200,
+		"retoNoContestaTiempo": 300,
+		"retoGanarRankingSupPuntos": 2000,
+		"retoGanarRankingInfPuntos": 500,
+		"retoGanarRankingIgualPuntos": 1000,
+		"retoPerderRankingSupPuntos": 500,
+		"retoPerderRankingInfPuntos": 2000,
+		"retoPerderRankingIgualPuntos":	1000,
+		"retoEmpatarPuntos": 0,
+		"lenguaje": "SP",
+		"textosSecciones": {
+			"home" : {
+				"titulo": "Home",
+				"descripcion": "hbalda a;kda da fdjasd flaj ;aksdf asdlf ajdfasd"
+			},
+			"ayuda" : {
+				"titulo": "Ayuda",
+				"descripcion": "Descripcion General",
+				"descripcion_texto": [	
+					"Regístrate rétate a ti mismo, a alguien conocido o cualquier jugador en línea.Mientras juegues puedes ganar premios instantáneos y si acumulas la mayor cantidad de puntos un gran premio a los ganadores cada mes.",
+					"¡Cuidado! Durante un reto se pierden puntos por respuestas incorrectas o por no aceptar retos; En este juego implemente gana el que sabe más.",
+					"Todo jugador debe tener un alias. El juego se inicia cuando un jugador se reta a si mismo (jugar trivias), reta a otro (retar a un alias), o reta a alguien al azar (retar aleatorio).",
+					"Cada reto, una vez aceptado, consiste en [numPreguntas] preguntas estilo trivia. Cada jugador recibe las mismas preguntas. Cada pregunta tiene una única respuesta correcta y debe ser contestada precionando la opción.",
+					"Existen muchas categorias de trivias, un ejemplo de una de ellas podría ser:",
+					"¿Qué tema es de Wilfrido Vargas?",
+					"1. Dormir contigo",
+					"2. Parampampam",
+					"3. Que se mueran los feos",
+					"4. Sazón",
+					"Los jugadores obtienen puntos por cada respuesta correcta ([retoRespCorrectaPuntos] puntos), y pierden puntos por respuestas incorrectas (-[retoRespIncorrectaPuntos] puntos) o por no contestar (-[retoNoContestaPuntos] puntos). Responde correctamente primero que tu contrincante y gana [retoRespPrimeroPuntos] puntos adicionales. Durante un reto, quien acumule más puntos gana el reto.",
+					"Ganar, empatar, o perder cada reto afecta el puntaje final del jugador con el cual se actualiza su ranking en la tabla de posiciones. Por ejemplo, ganar el reto a un jugador de ranking superior representa [retoGanarRankingSupPuntos] puntos al ganador y menos [retoPerderRankingInfPuntos] puntos al perdedor."
+				],
+			   "descripcion_tabla_puntaje": "El sistema de puntaje es el siguiente:",
+			   "tabla_desenlace" : [
+				   "Desenlace", 
+				   "Respuesta correcta",
+				   "Primero en responder",
+				   "Respuesta incorrecta",
+				   "Pregunta no respondida en [retoNoContestaTiempoMin] minutos",
+				   "Puntos ganados/perdidos cuando el jugador de ranking superior gana el reto",
+				   "Puntos ganados/perdidos cuando el jugador de ranking inferior gana el reto ",
+				   "Puntos ganados/perdidos por reto cuando ambos tienen el mismo ranking.",
+				   "Puntos ganados/perdidos cuando el reto termina en empate"
+			   		],	   
+			   "tabla_puntos" : [
+				   "Puntos otorgados",
+				   "[retoRespCorrectaPuntos]",
+				   "[retoRespPrimeroPuntos]",
+				   "[retoRespIncorrectaPuntos]",
+			   	   "[retoNoContestaPuntos]",
+				   "[retoGanarRankingSupPuntos]/-[retoPerderRankingInfPuntos]",
+				   "[retoGanarRankingInfPuntos]/-[retoPerderRankingSupPuntos]",
+				   "[retoGanarRankingIgualPuntos]/-[retoPerderRankingIgualPuntos]",
+				   "[retoEmpatarPuntos]/[retoEmpatarPuntos]"
+			   ],
+			   "premios": "Premios",
+			   "premios_texto": [	
+				   "PREMOS POR RANKING: se escogeran tres ganadores según los puntos que tengan acumulados en la fecha y hora del sorteo.",
+				   "PREMIOS INSTANTANEOS: consisten de preguntas hechas al azar a aquellos usuarios que estén jugando en un momento dado. Si respondes correctamente enseguida obtienes tu premio instantáneo. No se sabe cuando venga la pregunta, aai que mientras mas juegues, mas oportunidad tendrás de ganar un premio instantáneo."
+				]
+			},
+			"configuracion" : {
+				"titulo": "Configuracion",
+				"descripcion": "hbalda a;kda da fdjasd flaj ;aksdf asdlf ajdfasd"
+			},
+			"ranking" : {
+				"titulo": "Los mejores",
+				"descripcion": "Estas son los jugadores que tienen los mejores puntajes",
+				"tabla": {
+					"pos": "Pos.",
+					"usuario": "Alias",
+					"puntos": "Puntos"
+				}
+			},
+			"trivia" : {
+				"titulo": "Trivia",
+				"descripcion": "escoge la opción que crees correcta"
+			},
+			"perfil" : {
+				"titulo": "Perfil",
+				"descripcion": "hbalda a;kda da fdjasd flaj ;aksdf asdlf ajdfasd"
+			},
+			"premios" : {
+				"titulo": "Premios y Ganadores",
+				"descripcion": "A partir del viernes 16 de Agosto todos comenzaremos la gran competencia por increíbles premios. Reponde las trivias y participa cada 30 días.",
+				"proximo_sorteo": "Fecha del próximo sorteo",
+				"premios": "Premios",
+				"premio_1": "1er Premio",
+				"premio_2": "2do Premio",
+				"premio_3": "3er Premio"
+			},
+			"premioInstantaneo" : {
+				"titulo": "¡Premio Instantaneo!",
+				"descripcion": "Si respondes la siguiente pregunta de manera correcta podras ganar un [premio]"
+			},
+			"reto" : {
+				"titulo": "Retos",
+				"descripcion": "hbalda a;kda da fdjasd flaj ;aksdf asdlf ajdfasd"
+			}
+			
+		},
+		"trivias_archivos_ubicacion": "trivias",
+		"audios_ubicacion": "archivos/audios/",
+		"sonidoRespuestaIncorrecta": "respuesta_correcta.mp3",
+		"sonidoRespuestaCorrecta":   "respuesta_incorrecta.mp3",
+		"imagenes_categorias_ubicacion": "archivos/imagenes/categorias/",
+		"imagenes_premios_ubicacion": "archivos/imagenes/premios/",
+		"imagenes_sorteos_ubicacion": "archivos/imagenes/sorteos/",
+		"imagenes_fondos_ubicacion": "archivos/imagenes/fondos/",
+		"imagenes_fondos": [
+			{
+				"ubicacion_id": "1",
+				"direccion": "Chacao",
+				"latitud": "10°29′46″N",
+				"longitud": "66°51′12″W",
+				"portrait": {
+					"540x960":   "loc_001_p_540x960_android.png",
+					"720x1280":  "loc_001_p_720x1280_android.png",
+					"640x1136":  "loc_001_p_640x1136_iphone.png",
+					"1080x1920": "loc_001_p_1080x1920_android.png",
+					"1440x2560": "loc_001_p_1440x2560_android.png",
+					"1536x2048": "loc_001_p_1536x2048_ipad.png"
+				},
+				"landscape": {
+					"960x540": 	 "loc_001_l_960x540_android.png",
+					"1280x720":  "loc_001_l_1280x720_android.png",
+					"1136x640":  "loc_001_l_1136x640_iphone.png",
+					"1920x1080": "loc_001_l_1920x1080_android.png",
+					"2560x1440": "loc_001_l_2560x1440_android.png",
+					"2048x1536": "loc_001_l_2048x1536_ipad.png"				
+				}				
+			},
+			{
+				"ubicacion_id": "2",
+				"direccion": "Los Chaguaramos",
+				"latitud": "10°29′03″N",
+				"longitud": "66°53′10″W",
+				"portrait": {
+					"540x960":   "loc_002_p_540x960_android.png",
+					"720x1280":  "loc_002_p_720x1280_android.png",
+					"640x1136":  "loc_002_p_640x1136_iphone.png",
+					"1080x1920": "loc_002_p_1080x1920_android.png",
+					"1440x2560": "loc_002_p_1440x2560_android.png",
+					"1536x2048": "loc_002_p_1536x2048_ipad.png"
+				},
+				"landscape": {
+					"960x540": 	 "loc_002_l_960x540_android.png",
+					"1280x720":  "loc_002_l_1280x720_android.png",
+					"1136x640":  "loc_002_l_1136x640_iphone.png",
+					"1920x1080": "loc_002_l_1920x1080_android.png",
+					"2560x1440": "loc_002_l_2560x1440_android.png",
+					"2048x1536": "loc_002_l_2048x1536_ipad.png"				
+				}				
+			},
+			{
+				"ubicacion_id": "3",
+				"direccion": "Sabana Grande",
+				"latitud": "10°29′58″N",
+				"longitud": "66°52′37″W",
+				"portrait": {
+					"540x960":   "loc_003_p_540x960_android.png",
+					"720x1280":  "loc_003_p_720x1280_android.png",
+					"640x1136":  "loc_003_p_640x1136_iphone.png",
+					"1080x1920": "loc_003_p_1080x1920_android.png",
+					"1440x2560": "loc_003_p_1440x2560_android.png",
+					"1536x2048": "loc_003_p_1536x2048_ipad.png"
+				},
+				"landscape": {
+					"960x540": 	 "loc_003_l_960x540_android.png",
+					"1280x720":  "loc_003_l_1280x720_android.png",
+					"1136x640":  "loc_003_l_1136x640_iphone.png",
+					"1920x1080": "loc_003_l_1920x1080_android.png",
+					"2560x1440": "loc_003_l_2560x1440_android.png",
+					"2048x1536": "loc_003_l_2048x1536_ipad.png"				
+				}				
+			}
+		]
+	},
+	"categorias": [
+		{
+			"categoriaId": "1",
+			"titulo": "ATI",
+			"icono": "cat_001.svg",
+			"descripcion": "Prueba tu conocimiento de aplicaciones con tecnolgia internet y gana puntos...",
+			"dificultad": "facil",
+			"total_trivias":11,
+			"state": false,
+			"trivias": [
+				{
+					"triviaId": 0,
+					"pregunta_texto": "Es un lenguaje usado para definir la presentación de un documento HTML o XML",
+					"respuestaCorrecta": "2",
+					"opciones": {
+						"1": "XHTML",
+						"2": "CSS",
+						"3": "JavaScript",
+						"4": "HTTP"
+					}
+				},
+				{
+					"triviaId": 1,
+					"pregunta_texto": "Algunas novedades en CSS3 son:",
+					"respuestaCorrecta": "4",
+					"opciones": {
+						"1": "Efectos visuales sin necesidad de imágenes",
+						"2": "Usos de esquinas redondeadas y creación de sombras",
+						"3": "Fuentes únicas",
+						"4": "Todas las anteriores"
+					}
+				},
+				{
+					"triviaId": 2,
+					"pregunta_texto": "En las hojas de estilo (CSS) los selectores sirven para:",
+					"respuestaCorrecta": "2",
+					"opciones": {
+						"1": "Establecer el estilo, sus atributos y valores",
+						"2": "Enlazar los elementos HTML y el estilo",
+						"3": "Llamar a las hojas de estilo",
+						"4": "Todas las anteriores"
+					}					
+				},
+				{
+					"triviaId": 3,
+					"pregunta_texto": "En las hojas de estilo (CSS) en la parte de la declaración:",
+					"respuestaCorrecta": "1",
+					"opciones": {
+						"1": "Se establece el estilo, sus atributos y valores",
+						"2": "Se enlazan los elementos HTML y el estilo",
+						"3": "Se llama a las hojas de estilo",
+						"4": "Ninguna de las anteriores"
+					}					
+				},
+				{
+					"triviaId": 4,
+					"pregunta_texto": "En el uso de las hojas de estilo (CSS) el Selector Universal sirve para:",
+					"respuestaCorrecta": "3",
+					"opciones": {
+						"1": "Seleccionar un elemento específico de la página",
+						"2": "Seleccionar los atributos de la página",
+						"3": "Seleccionar todos los elementos de la página",
+						"4": "Seleccionar la etiqueta BODY de HTML"
+					}					
+				},
+				{
+					"triviaId": 5,
+					"pregunta_texto": "En el uso de las hojas de estilo (CSS) el selector de Etiqueta sirve para:",
+					"respuestaCorrecta": "1",
+					"opciones": {
+						"1": "Seleccionar los elementos de la página cuya etiqueta HTML coincida con el nombre del selector",
+						"2": "Seleccionar todos los elementos de la página cuyo atributo coincida con el selector",
+						"3": "Seleccionar todos los elementos de la página",
+						"4": "Seleccionar el elemento etiqueta de HTML"
+					}					
+				},
+				{
+					"triviaId": 6,
+					"pregunta_texto": "En el uso de las hojas de estilo (CSS) el Selector de Clase sirve para:",
+					"respuestaCorrecta": "2",
+					"opciones": {
+						"1": "Seleccionar los elementos de la página cuya etiqueta HTML coincida con el nombre del selector",
+						"2": "Seleccionar todos los elementos de la página cuyo atributo class coincida con el selector",
+						"3": "Seleccionar todos los elementos de la página",
+						"4": "Seleccionar el elemento CLASE de HTML"
+					}					
+				},
+				{
+					"triviaId": 7,
+					"pregunta_texto": "En el uso de las hojas de estilo (CSS) el Selector ID sirve para:",
+					"respuestaCorrecta": "3",
+					"opciones": {
+						"1": "Seleccionar los elementos de la página cuya etiqueta HTML coincida con el nombre del selector",
+						"2": "Seleccionar todos los elementos de la página cuyo atributo class coincida con el selector",
+						"3": "Selecciona todos los elementos de la página cuyo atributo ID coincide con el selector",
+						"4": "Seleccionar el elemento ID de HTML"
+					}					
+				},
+				{
+					"triviaId": 8,
+					"pregunta_texto": "En la declaración de las hojas de estilo (CSS) los Selectores ID se identifican por que:",
+					"respuestaCorrecta": "1",
+					"opciones": {
+						"1": "Comienzan con numeral (#)",
+						"2": "Comienzan con un punto (.)",
+						"3": "Tiene el mismo nombre que se especifica en el atributo class",
+						"4": "Tiene el mismo nombre de la etiqueta HTML que los engloba"
+					}					
+				},
+				{
+					"triviaId": 9,
+					"pregunta_texto": "En la declaración de las hojas de estilo (CSS) los Selectores de Clase se identifican por que:",
+					"respuestaCorrecta": "2",
+					"opciones": {
+						"1": "Comienzan con numeral (#)",
+						"2": "Comienzan con un punto (.)",
+						"3": "Tiene el mismo nombre que se especifica en el atributo ID",
+						"4": "Tiene el mismo nombre de la etiqueta HTML que los engloba"
+					}					
+				},
+				{
+					"triviaId": 10,
+					"pregunta_texto": "La siguiente es una unidad de medida relativa en CSS:",
+					"respuestaCorrecta": "2",
+					"opciones": {
+						"1": "cm",
+						"2": "em",
+						"3": "pt",
+						"4": "px"
+					}					
+				},
+				{
+					"triviaId": 11,
+					"pregunta_texto": "La siguiente es una unidad de medida absoluta en CSS:",
+					"respuestaCorrecta": "3",
+					"opciones": {
+						"1": "ex",
+						"2": "em",
+						"3": "pt",
+						"4": "%"
+					}					
+				}
+			]
+		},
+		{
+			"categoriaId": "2",
+			"titulo": "DAM",
+			"icono": "cat_002.svg",
+			"descripcion": "Prueba tu conocimiento de aplicaciones moviles y gana puntos...",
+			"dificultad": "facil",
+			"total_trivias":6,
+			"state": false,
+			"trivias": [
+				{
+					"triviaId": 20,
+					"pregunta_texto": "El siguiente es un dispositivo móvil",
+					"respuestaCorrecta": "4",
+					"opciones": {
+						"1": "Teléfonos móviles",
+						"2": "Relojes inteligentes",
+						"3": "Lectores de libros electrónicos",
+						"4": "Todas las anteriores"
+					}					
+				},
+				{
+					"triviaId": 21,
+					"pregunta_texto": "Los teléfonos móviles existen desde mediados de",
+					"respuestaCorrecta": "3",
+					"opciones": {
+						"1": "1970",
+						"2": "1980",
+						"3": "1990",
+						"4": "2000"
+					}					
+				},
+				{
+					"triviaId": 22,
+					"pregunta_texto": "Los Operadores son:",
+					"respuestaCorrecta": "2",
+					"opciones": {
+						"1": "Las compañias agregadoras",
+						"2": "Las compañias telefónicas",
+						"3": "Las compañias de dispositivos móviles",
+						"4": "Todas las anteriores"
+					}					
+				},
+				{
+					"triviaId": 23,
+					"pregunta_texto": "Las aplicaciones móviles nativas:",
+					"respuestaCorrecta": "4",
+					"opciones": {
+						"1": "Son el tipo de aplicación más antigua y más común para dispositivos móviles",
+						"2": "Se crean con el lenguaje de programación propio del sistema operativo del dispositivo móvil",
+						"3": "Interactúa directamente con el SO sin utilizar ningún software intermediario",
+						"4": "Todas las anteriores"
+					}					
+				},
+				{
+					"triviaId": 24,
+					"pregunta_texto": "Las aplicaciones móviles que son desarrolladas y compiladas para cada plataforma móvil se llaman:",
+					"respuestaCorrecta": "1",
+					"opciones": {
+						"1": "Aplicaciones nativas",
+						"2": "Aplicaciones web móviles",
+						"3": "Aplicaciones hibridas",
+						"4": "Todas las anteriores"
+					}					
+				},
+				{
+					"triviaId": 25,
+					"pregunta_texto": "Este tipo de aplicación móvil es el segundo tipo de aplicación que apareció en el mercado, tomando mayor auge con el lanzamiento del iPhone en el 2007",
+					"respuestaCorrecta": "2",
+					"opciones": {
+						"1": "Aplicaciones nativas",
+						"2": "Aplicaciones web móviles",
+						"3": "Aplicaciones hibridas",
+						"4": "Ninguna de las anteriores"
+					}					
+				}
+			]
+		},
+		{
+			"categoriaId": "3",
+			"titulo": "IS",
+			"icono": "cat_003.svg",
+			"descripcion": "Prueba tu conocimiento de ingenieria del software y gana puntos...",
+			"dificultad": "facil",
+			"total_trivias":5,
+			"state": false,
+			"trivias": [
+				{
+					"triviaId": 30,
+					"pregunta_texto": "Cuál de los siguientes modelos en RUP se usa para representar los servicios que ofrece una organización y las acciones que el Negocio realiza para atender las solicitudes de entidades externas al Negocio",
+					"respuestaCorrecta": "1",
+					"opciones": {
+						"1": "Modelo Use Case del Negocio",
+						"2": "Modelo de Análisis / Diseño del Negocio",
+						"3": "Modelo Use Case de sistema",
+						"4": "Todas las anteriores"
+					}					
+				},
+				{
+					"triviaId": 31,
+					"pregunta_texto": "Cuál de los siguientes artefactos de software se utiliza con el propósito de especificar las actividades y/o las acciones que realiza el Negocio para atender los posibles eventos involucrados en un use case del negoci",
+					"respuestaCorrecta": "2",
+					"opciones": {
+						"1": "Un diagrama use case",
+						"2": "La plantilla para especificar los use case",
+						"3": "Un diagrama de secuencia",
+						"4": "Un diagrama de actividad"
+					}					
+				},
+				{
+					"triviaId": 32,
+					"pregunta_texto": "El modelo use case del negocio consiste de",
+					"respuestaCorrecta": "2",
+					"opciones": {
+						"1": "Una descripción del problema y la definición de casos de prueba",
+						"2": "Un diagrama use case y las especificaciones de cada uno de los use case del negocio",
+						"3": "Un diagrama de clase del negocio y las relaciones entre las clases, y un diagrama de secuencia por cada uno de los use case del negocio",
+						"4": "Las componentes reutilizables del diagrama use case "
+					}					
+				},
+				{
+					"triviaId": 33,
+					"pregunta_texto": "Un diagrama UC en la disciplina Requerimientos especifica",
+					"respuestaCorrecta": "1",
+					"opciones": {
+						"1": "Cuales son las funcionalidades del sistema sin especificar propiedades de los objetos y los requerimientos que se derivan del modelado del negocio",
+						"2": "Las prioridades de cada requerimiento",
+						"3": "El despliegue de mensajes o data del negocio especificando el o los elementos gráficos de usuario que van a ser utilizados por el sistema",
+						"4": "Todas las anteriores"
+					}					
+				},
+				{
+					"triviaId": 34,
+					"pregunta_texto": "Al especificar un use case se establecen pre-condiciones y post-condiciones. Cuál de las siguientes aserciones es verdadera:",
+					"respuestaCorrecta": "4",
+					"opciones": {
+						"1": "Las pre-condiciones y post-condiciones son equivalentes",
+						"2": "Las pre-condiciones implican las post-condiciones",
+						"3": "La post-condición se cumple cuando el use case finaliza exitosamente",
+						"4": "las pre-condiciones definen los predicados que deben satisfacerse durante la realización del use case"
+					}					
+				}
+			]
+		},
+		{
+			"categoriaId": "4",
+			"titulo": "MU",
+			"icono": "cat_004.svg",
+			"descripcion": "Prueba tu conocimiento en musica y gana puntos...",
+			"dificultad": "facil",
+			"total_trivias":3,
+			"state": false,
+			"trivias": [
+				{
+					"triviaId": 40,
+					"pregunta_texto": "¿En qué año salió el hit ‘Baby One More Time’ que catapultó a Britney Spears al estrellato con tan solo 16 años?",
+					"respuestaCorrecta": "2",
+					"opciones": {
+						"1": "1998",
+						"2": "1998",
+						"3": "2000",
+						"4": "2001"
+					}					
+				},
+				{
+					"triviaId": 41,
+					"pregunta_imagen": "41/trivia_41.jpg",
+					"respuestaCorrecta": "2",
+					"opciones": {
+						"1": "Britney Spears",
+						"2": "Sharleen Spiteri",
+						"3": "Cristina Aguilera",
+						"4": "Shakira"
+					}					
+				},
+				{
+					"triviaId": 42,
+					"pregunta_audio": "42/trivia_42.mp3",
+					"respuestaCorrecta": "4",
+					"opciones": {
+						"1": "Seinfield",
+						"2": "How I Met Your Mother",
+						"3": "The Big Bang Theory",
+						"4": "Friends"
+					}					
+				}
+			]
+		}
+	],
+	"Sorteos": [
+		{
+			"sorteoId": "2",
+			"titulo": "Viernes a lo grande",
+			"imagen": "sor_001.svg",
+			"descripcion": "Este viernes a las 2 de la tarde ganas maravillosos premios",
+			"Fecha_hora_sorteo": "2019/09/20 14:00:00",
+			"premios": {
+						"1": {
+								"premioId": 4,
+								"tipo": "fisico",
+								"titulo": "Apple iPod touch (32GB)",
+								"descripcion": "4-Inch Retina display, Your favorite music, gaming, and AR apps in your pocket, A10 Fusion chip for up to 2x faster performance, Up to 3x faster graphics, Group FaceTime with family and friends and Connect using Wi-Fi and Bluetooth",
+								"imagen": {
+									"imagen_hdpi": "pre_0001_hdpi.png",
+									"imagen_ldpi": "pre_0001_ldpi.png",
+									"imagen_mdpi": "pre_0001_mdpi.png",
+									"imagen_xhdpi": "pre_0001_xhdpi.png",
+									"imagen_xxhdpi": "pre_0001_xxhdpi.png",
+									"imagen_xxxhdpi": "pre_0001_xxxhdpi.png"
+								}
+							},
+						"2": {
+								"premioId": 5,
+								"tipo": "fisico",
+								"titulo": "Pokemon: Let's Go, Pikachu!",
+								"descripcion": "Become a top Pokémon trainer on an adventure with Pikachu, Encounter Pokémon in the Kanto region;ESRB Content: Mild Cartoon Violence; Genre: Adventure, Role Playing Play the entire game with a single Joy Con controller or use the Poké Ball Plus accessory, which will light up, vibrate and make sounds to brig your adventure to life",
+								"imagen": {
+									"imagen_hdpi": "pre_0002_hdpi.png",
+									"imagen_ldpi": "pre_0002_ldpi.png",
+									"imagen_mdpi": "pre_0002_mdpi.png",
+									"imagen_xhdpi": "pre_0002_xhdpi.png",
+									"imagen_xxhdpi": "pre_0002_xxhdpi.png",
+									"imagen_xxxhdpi": "pre_0002_xxxhdpi.png"
+								}	
+							},
+						"3": {
+								"premioId": 6,
+								"tipo": "fisico",
+								"titulo": "Nezuko Kamado Nendoroid Action Figure",
+								"descripcion": "Good Smile Demon Slayer: Kimetsu No Yaiba",
+								"imagen": {
+									"imagen_hdpi": "pre_0003_hdpi.png",
+									"imagen_ldpi": "pre_0003_ldpi.png",
+									"imagen_mdpi": "pre_0003_mdpi.png",
+									"imagen_xhdpi": "pre_0003_xhdpi.png",
+									"imagen_xxhdpi": "pre_0003_xxhdpi.png",
+									"imagen_xxxhdpi": "pre_0003_xxxhdpi.png"
+								}
+							}
+					}
+		}	
+	],
+	"SorteosTerminados": [
+		{
+			"sorteoId": "1",
+			"titulo": "Viernes a lo grande",
+			"imagen": "sor_001.svg",
+			"descripcion": "Este viernes a las 2 de la tarde ganas maravillosos premios",
+			"Fecha_hora_sorteo": "2019/08/16 14:00:00",
+			"premios": {
+						"1": {
+								"premioId": 1,
+								"tipo": "fisico",
+								"titulo": "Apple iPod touch (32GB)",
+								"descripcion": "4-Inch Retina display, Your favorite music, gaming, and AR apps in your pocket, A10 Fusion chip for up to 2x faster performance, Up to 3x faster graphics, Group FaceTime with family and friends and Connect using Wi-Fi and Bluetooth",
+								"imagen": {
+									"imagen_hdpi": "pre_0001_hdpi.png",
+									"imagen_ldpi": "pre_0001_ldpi.png",
+									"imagen_mdpi": "pre_0001_mdpi.png",
+									"imagen_xhdpi": "pre_0001_xhdpi.png",
+									"imagen_xxhdpi": "pre_0001_xxhdpi.png",
+									"imagen_xxxhdpi": "pre_0001_xxxhdpi.png"
+								},
+								"ganador": {
+									"usuarioId": 1,
+									"alias": "mpaulaherrero",
+									"puntos": 10000
+								}
+							},
+						"2": {
+								"premioId": 2,
+								"tipo": "fisico",
+								"titulo": "Pokemon: Let's Go, Pikachu!",
+								"descripcion": "Become a top Pokémon trainer on an adventure with Pikachu, Encounter Pokémon in the Kanto region;ESRB Content: Mild Cartoon Violence; Genre: Adventure, Role Playing Play the entire game with a single Joy Con controller or use the Poké Ball Plus accessory, which will light up, vibrate and make sounds to brig your adventure to life",
+								"imagen": {
+									"imagen_hdpi": "pre_0002_hdpi.png",
+									"imagen_ldpi": "pre_0002_ldpi.png",
+									"imagen_mdpi": "pre_0002_mdpi.png",
+									"imagen_xhdpi": "pre_0002_xhdpi.png",
+									"imagen_xxhdpi": "pre_0002_xxhdpi.png",
+									"imagen_xxxhdpi": "pre_0002_xxxhdpi.png"
+								},
+								"ganador": {
+									"usuarioId": 2,
+									"alias": "batman",
+									"puntos": 9000
+								}
+							},
+						"3": {
+								"premioId": 3,
+								"tipo": "fisico",
+								"titulo": "Nezuko Kamado Nendoroid Action Figure",
+								"descripcion": "Good Smile Demon Slayer: Kimetsu No Yaiba",
+								"imagen": {
+									"imagen_hdpi": "pre_0003_hdpi.png",
+									"imagen_ldpi": "pre_0003_ldpi.png",
+									"imagen_mdpi": "pre_0003_mdpi.png",
+									"imagen_xhdpi": "pre_0003_xhdpi.png",
+									"imagen_xxhdpi": "pre_0003_xxhdpi.png",
+									"imagen_xxxhdpi": "pre_0003_xxxhdpi.png"
+								},
+								"ganador": {
+									"usuarioId": 10,
+									"alias": "picarita",
+									"puntos": 8000
+								}
+							}
+					}
+		}	
+	],
+	"Ranking": {
+		"Fecha_hora": "2019/09/14 16:44:00",
+		"posiciones": {
+			"1": {
+				"usuarioId": 1,
+				"alias": "mpaulaherrero",
+				"puntos": 10000
+			},
+			"2": {
+				"usuarioId": 2,
+				"alias": "batman",
+				"puntos": 9000
+			},
+			"3": {
+					"usuarioId": 10,
+					"alias": "picarita",
+					"puntos": 8001
+			},
+			"4": {
+				"usuarioId": 21,
+				"alias": "bluesad",
+				"puntos": 8000
+			},
+			"5": {
+				"usuarioId": 13,
+				"alias": "pockeyo",
+				"puntos": 7000
+			},
+			"6": {
+				"usuarioId": 3,
+				"alias": "rapidMain",
+				"puntos": 6000
+			}
+		}
+		
+	},
+	"UsuariosLinea": {
+		"Fecha_hora": "2019/09/14 16:44:00",
+		"usuarios": [
+			{
+				"usuarioId": 10,
+				"alias": "picarita",
+				"puntos": 8001,
+				"ranking": "3"
+			},
+			{
+				"usuarioId": 21,
+				"alias": "bluesad",
+				"puntos": 8000,
+				"ranking": "4"
+			},
+			{
+				"usuarioId": 13,
+				"alias": "pockeyo",
+				"puntos": 7000,
+				"ranking": "5"
+			},
+			{
+				"usuarioId": 3,
+				"alias": "rapidMain",
+				"puntos": 6000,
+				"ranking": "6"
+			}
+		]
+	},
+	"PremioInstantaneo": {
+		"sorteoId": "12",
+		"premio": {
+			"premioId": 40,
+			"tipo": "virtual",
+			"titulo": "¡Gana muchos puntos!",
+			"descripcion": "Responde bien y gana [puntos] puntos",
+			"puntos": 20000
+		},
+		"trivia": {
+			"triviaId": 0,
+			"pregunta_texto": "Es un lenguaje usado para definir la presentación de un documento HTML o XML",
+			"respuestaCorrecta": "2",
+			"opciones": {
+				"1": "XHTML",
+				"2": "CSS",
+				"3": "JavaScript",
+				"4": "HTTP"
+			}
+		}
+	},
+	"solicitudReto": {
+		"retoId": 1,
+		"categoriaId": 10,
+		"retador": {
+				"usuarioId": 10,
+				"alias": "picarita",
+				"puntos": 8001,
+				"ranking": "3"
+		}
+	}
+}	
